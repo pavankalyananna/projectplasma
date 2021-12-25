@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<!link rel="stylesheet" href="style.css">
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+<img src="https://dims.healthgrades.com/dims3/MMH/b1d3b10/2147483647/strip/true/crop/5760x3222+0+87/resize/715x400!/format/webp/quality/75/?url=https%3A%2F%2Fd26ua9paks4zq.cloudfront.net%2Fdd%2Fef%2F6709008243ec9c5250e9c529ffc0%2Fgettyimages-811864350.jpg" width="1400" height="620">
+
+<div class="header">
+<div>Plasma Donor App</div>
+	<ul>
+		
+		
+		<li><a href="/registration">Register</a></li>
+		<li><a class="active" href="/login">Login</a></li>
+	</ul>
+</div>
+ <div class="login" >
+		<div>
+		</div>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('loginpage')}}"method="post">
+    	<input type="text" name="user" placeholder="Enter UserName" required="required" style="color:black" />
+        <input type="password" name="passw" placeholder="Enter Password" required="required" style="color:black" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    	
+    </form>
+<br><br>
+<div style="color:black">
+ {{ pred }}</div>
+ </div>
+
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<!link rel="stylesheet" href="style.css">
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+<img src="https://dims.healthgrades.com/dims3/MMH/b1d3b10/2147483647/strip/true/crop/5760x3222+0+87/resize/715x400!/format/webp/quality/75/?url=https%3A%2F%2Fd26ua9paks4zq.cloudfront.net%2Fdd%2Fef%2F6709008243ec9c5250e9c529ffc0%2Fgettyimages-811864350.jpg" width="1400" height="620">
+
+
+<div class="header">
+<div>Plasma Donor App</div>
+	<ul>
+		
+		
+		
+		<li><a href="/stats">HOME</a></li>
+		
+		
+		
+	</ul>
+</div>
+ <div class="login">
+		<div>
+		</div>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('requested')}}"method="post">
+		<select name="bloodgrp">
+					  <option value="select" selected>Choose your blood group</option>
+					  <option value="O Positive">O Positive</option>
+					  <option value="A Positive">A Positive</option>
+					  <option value="B Positive">B Positive</option>
+					  <option value="AB Positive">AB Positive</option>
+					  <option value="O Negative">O Negative</option>
+					  <option value="A Negative">A Negative</option>
+					  <option value="B Negative">B Negative</option>
+					  <option value="AB Negative">AB Negative</option>
+		</select>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit the request</button>
+    
+    </form>
+
+
+ <br><br>
+<div style="color:black">
+ {{ pred }}</div>
+
+ </div>
+
+
+</body>
+</html>
+
